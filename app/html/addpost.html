@@ -1,0 +1,55 @@
+<!-- create a blog post -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+    <!-- jQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="..//css/addpost.css">
+    <link rel="stylesheet" href="../css/richtext.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="..//js/jquery.richtext.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="..//js/blogeditor.js" defer></script>
+    
+  </head>
+
+  <body>
+    <div class="container">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active" id="nav-Add-Post-tab" data-bs-toggle="tab" data-bs-target="#nav-Add-Post" type="button" role="tab" aria-controls="nav-Add-Post" aria-selected="true">Add Post</button>
+          <button class="nav-link" id="nav-Manage-Post-tab" data-bs-toggle="tab" data-bs-target="#nav-Manage-Post" type="button" role="tab" aria-controls="nav-Manage-Post" aria-selected="false">Manage Post</button>
+        </div>
+      </nav>
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-Add-Post" role="tabpanel" aria-labelledby="nav-Add-Post-tab">
+          <form>
+            <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Blog Title</label>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+            </div>
+            <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Category</label>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+            </div>
+            <div class="page-wrapper box-content">
+                <textarea class="content" name="example"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">POST</button>
+        </form>
+        </div>
+        <div class="tab-pane fade" id="nav-Manage-Post" role="tabpanel" aria-labelledby="nav-Manage-Post-tab">manage post</div>
+      </div>
+    </div>
+  </body>
+</html>
