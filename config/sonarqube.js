@@ -2,7 +2,7 @@ var scanner = require('sonarqube-scanner');
 
 scanner(
   {
-    serverUrl: process.env.SONAR_HOST || 'http://localhost:9000',
+    serverUrl: process.env.SONAR_HOST || 'http://172.27.12.78',
 
     options: {
       'sonar.projectVersion': '1.1.0',
@@ -17,3 +17,4 @@ scanner(
     // callback is required
   }
 );
+

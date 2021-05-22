@@ -1,0 +1,5 @@
+projectKey=blog-it
+serverUrl=http://172.27.12.78
+dashboardUrl=http://172.27.12.78/dashboard/index/blog-it
+ceTaskId=AXmUde04a_m12xx6Rv2I
+ceTaskUrl=http://172.27.12.78/api/ce/task?id=AXmUde04a_m12xx6Rv2I
