@@ -62,7 +62,7 @@
 
 
           <h5 id="username" onload="user"></h5>
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Logout</button>
+          <button class="btn btn-secondary my-2 my-sm-0" onclick="logout()" type="submit">Logout</button>
         </div>
       </div>
     </div>
@@ -73,9 +73,9 @@
     <div class="container">
       <br>
       <div class="row d-flex align-items-center justify-content-center">
-        <div class="col-6">
+        <div class="col-6" id="parent">
           <div class="card" id="cards">
-            <img class="image" alt="..." id="image" src="" />
+            <img cla ss="image" alt="..." id="image" src="" />
             <div class="card-body">
               <h5 class="card-title" id="card-title"></h5>
               <p class="card-text" id="card-text" style="color: gray;font-size: 12px;font-weight: 100;">
@@ -88,14 +88,18 @@
                       style="outline: none;border: none;text-decoration: none;text-transform: none;background-color: white;">
                       <span>0</span>
                     </button>
+                  
                   </div>
                   <div class="col-6 p-0">
-                    <input type="text" name="" id="" class="form-control" placeholder="Add Comment Here" />
+                    <input type="text" class="form-control" placeholder="Add Comment Here" />
                   </div>
                   <div class="col-3 p-0">
                     <button onclick="commentHere(this)" class="btn btn-outline-secondary btn-block">
                       Comment
                     </button>
+                  </div>
+                  <div style="display:none;">
+                    <!---Inside array index ++-->
                   </div>
                 </div>
                 <div class="d-flex flex-column">
@@ -125,84 +129,3 @@
 </body>
 
 </html>
-<script>
-
-
-  // // $.getJSON('login.json', function (data) {
-
-  //   let data = localStorage.getItem('email');
-
-  //   if (data == "undefined" || data == "" || data == null) {
-  //     window.location.replace("login.html");
-
-  //   }
-  //   else {
-  //     document.getElementById('username').innerHTML = data;
-  //     console.log("PAGE LOADED SUCCESSFULLY");
-  //   }
-
-
-  // // });
-
-
-  //  document.getElementById("username").addEventListener("load",user);
-  // window.addEventListener("login.json", function (data) {
-  //   let data = localStorage.getItem('email');
-
-  //   if (data == "undefined" || data == "" || data == null) {
-  //     window.location.replace("login.html");
-
-  //   }
-  //   else {
-  //     document.getElementById('username').innerHTML = data;
-  //     console.log("PAGE LOADED SUCCESSFULLY");
-  //   }
-
-
-  // })
-
-
-    var contents = [];
-
-
-
-
-    window.onload = (event) => {
-
-
-      $.getJSON('userpage.json', function (data) { // Get data from JSON file
-        console.log(data);
-
-        // console.log(data[0])
-        // console.log("CONTENTS" + contents);
-        // alert(localStorage.getItem(data['like']))
-
-        // for (let key in localStorage) {
-        //   localStorage.getItem('like')
-        // }
-        var itm = document.getElementById("cards");
-        for (var i in data) {
-          // Copy the element and its child nodes
-          var cln = itm.cloneNode(true);
-          cln.childNodes[1].src = data[i]["image"];
-          console.log(cln.childNodes[0]);
-
-          cln.childNodes[3].childNodes.innerText = data[i]["card-title"];
-          console.log(cln.childNodes[3].childNodes[0].innerText = data[i]["card-title"])
-
-          cln.childNodes[3].childNodes[1].innerText = data[i]["card-text"];
-          // console.log(cln.childNodes[3].childNodes[5].childNodes[1].childNodes[1].childNodes[1].childNodes);
-          cln.childNodes[3].childNodes[5].childNodes[1].childNodes[1].childNodes[1].innerText = data[i]["like"];
-          // Append the cloneddiv element to div with 
-          itm.appendChild(cln);
-          // console.log(cln);
-
-          // for (let i = 0; i < localStorage.length; i++) {
-          //   let key = localStorage.key(i);
-          //   localStorage.setItem('like', data[i]['like']);
-          // }
-        }
-      });
-
-    };
-</script>

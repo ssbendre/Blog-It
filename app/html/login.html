@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="../css/login.css">
-    <script src="../js/login.js"> </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/login.js"> </script>
     <title>Document</title>
 </head>
 
@@ -108,32 +108,29 @@
     </div>
 </body>
 <script>
-
     var json1;
 
-    $.getJSON("data.json", function (json) {
+$.getJSON("data.json", function (json) {
 
-        json1 = json;
-        console.log(json);
-    })
+    json1 = json;
+    console.log(json);
+})
 
-    var email = document.getElementById('email');
-    var password = document.getElementById('password');
+var email = document.getElementById('email');
+var password = document.getElementById('password');
 
-    var login = function (email, password) {
+var login = function (email, password) {
 
-        console.log(email.value+"\n"+ password.value+"\n"+email.value);
-        if (json1[email.value] != "undefined" && json1[email.value] == password.value) {
-            localStorage.setItem('email', password.value);
-            window.location.replace("userpage.html");
-        }
-        else {
-            console.log("INVALID CREDENTIALS!!");
-
-        }
+    console.log(email.value+"\n"+ password.value+"\n"+email.value);
+    if (json1[email.value] != "undefined" && json1[email.value] == password.value) {
+        localStorage.setItem('email', password.value);
+        window.location.replace("userpage.html");
+    }
+    else {
+        console.log("INVALID CREDENTIALS!!");
 
     }
 
+}
 </script>
-
 </html>
