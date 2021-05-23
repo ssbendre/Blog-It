@@ -1,11 +1,16 @@
 .container-fluid{
     border: solid 1px;
-    width: 3000px;
-    
+    background-color: whitesmoke;
 }
-.container-fluid .card-deck{
+card{
     display: inline-block;
     
 }
+   
+img{
+       width: 277px;
+       height: 200px;
+       margin: auto;
+     }
 
-
+$card-height: 100%

@@ -1,3 +1,6 @@
+$br:50%;
+$clr: #fff;
+$ta:center;
 footer
 {
     background-color:lightseagreen;
@@ -11,13 +14,13 @@ footer
 .section-header h3 {
     font-size: 36px;
     color: #283d50;
-    text-align: center;
+    text-align: $ta;
     font-weight: 500;
     position: relative
 }
 
 .section-header p {
-    text-align: center;
+    text-align: $ta;
     margin: auto;
     font-size: 15px;
     padding-bottom: 60px;
@@ -30,27 +33,17 @@ footer
 }
 
 #team .member {
-    text-align: center;
+    text-align: $ta;
     margin-bottom: 20px;
     position: relative;
-    border-radius: 50%;
+    border-radius: $br;
     overflow: hidden
 }
 
 #team .member .member-info {
     opacity: 0;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
+    align-items: $ta;
     position: absolute;
     bottom: 0;
     top: 0;
@@ -70,30 +63,30 @@ footer
     transition: 0.4s;
     height: 200px;
     width: 200px;
-    border-radius: 50%
+    border-radius: $br;
 }
 
 .member img {
     height: 200px;
     width: 200px;
-    border-radius: 50%
+    border-radius: $br;
 }
 
 #team .member h4 {
     font-weight: 700;
     margin-bottom: 2px;
     font-size: 18px;
-    color: #fff
+    color:$clr;
 }
 
 #team .member span {
     font-style: italic;
     display: block;
     font-size: 13px;
-    color: #fff
+    color:$clr;
 }
 
 #team .member .social a {
     transition: none;
-    color: #fff
+    color:$clr;
 }
