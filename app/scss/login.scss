@@ -1,0 +1,94 @@
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+.row{
+    background-image: url(/images/bk2.jpg); background-repeat: no-repeat; background-position: center; 
+    background-size: cover; display: flex; flex-direction: column; 
+    justify-content: center; align-items: center; width:auto;
+    height: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 54px;
+}
+
+.column{
+    width: fit-content;
+  }
+
+ #c1{
+    font-size: 30px; margin-top: 30px; color: white;
+ } 
+ #c2{
+    margin-top: 20px; color: white; font-size: 18px;
+ }
+ #c3{
+    margin-top: 20px; display: flex; flex-direction: column;
+    height: 52vh; width: 480px; opacity: 0.7;
+ }
+ #c31{
+    display: flex; flex-direction: row; justify-content: space-between;
+ }
+ #c311{
+    color: white; margin-top: 10px ; margin-left: 20px; font-size: 25px;
+    width: fit-content;
+ }
+ #c312{
+    margin-top: 10px; margin-right: 20px;
+    width: fit-content;
+ }
+
+ #c32{
+    color: whitesmoke; margin-top: 10px; margin-left: 20px; margin-bottom: 8px;
+    width: fit-content;
+ }
+
+ #c33{
+    margin: 10px 20px;
+ }
+.c33-text{
+    width: 100%;
+}
+
+ #c34{
+    margin: 10px 60px;
+    width: fit-content;
+    align-items: center;
+    
+ }
+ #c341{
+    color: white; width: 200px; background-color: teal;
+    border-radius: 4px; margin: 10px 20px;
+     justify-content: center;
+     align-items: center;
+ }
+
+ #c35{
+    color: wheat; margin-top: 2px; margin-left: 178px; align-items: center;
+ }
+
+ #c36{
+    display: flex;
+    align-items: center;
+    color: white;
+ }
+ #c361{
+    margin-bottom: 20px; margin-left: 20px;
+ }
+ #c362{
+    padding: 5px; margin-bottom: 20px;
+ }
+
+ #c4{
+    margin-top: 30px; color: white;
+ }
+
+ #c5{
+    margin: 10px 5px; color: white; background-color: teal; border-radius: 4px; width: 100px;
+ }
+ 
+#c51{
+        display: flex;
+        flex-direction: row;
+    }
