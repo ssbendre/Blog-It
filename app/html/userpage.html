@@ -25,10 +25,11 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03"
+        aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-  
+
       <div class="collapse navbar-collapse" id="navbarColor03">
         <ul class="navbar-nav me-auto">
           <li class="nav-item">
@@ -46,7 +47,8 @@
             <a class="nav-link" href="#">About</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Dropdown</a>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="#">Action</a>
               <a class="dropdown-item" href="#">Another action</a>
@@ -56,21 +58,23 @@
             </div>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        <div class="d-flex">
+
+
+          <h5 id="username" onload="user"></h5>
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Logout</button>
+        </div>
       </div>
     </div>
   </nav>
-  
+
 
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
       <br>
       <div class="row d-flex align-items-center justify-content-center">
-        <div class="col-6"  >
-          <div class="card" id="cards" >
+        <div class="col-6">
+          <div class="card" id="cards">
             <img class="image" alt="..." id="image" src="" />
             <div class="card-body">
               <h5 class="card-title" id="card-title"></h5>
@@ -106,7 +110,7 @@
 
             </div>
 
-            
+
           </div>
 
 
@@ -120,49 +124,85 @@
 
 </body>
 
+</html>
 <script>
 
-  var contents = [];
 
-  window.onload = (event) => {
-    $.getJSON('userpage.json', function (data) { // Get data from JSON file
-      console.log(data);
-      // console.log(data[0])
-      // console.log("CONTENTS" + contents);
-      // alert(localStorage.getItem(data['like']))
+  // // $.getJSON('login.json', function (data) {
 
-      // for (let key in localStorage) {
-      //   localStorage.getItem('like')
-      // }
-      var itm = document.getElementById("cards");
-       
-      for (var i in data) {
+  //   let data = localStorage.getItem('email');
+
+  //   if (data == "undefined" || data == "" || data == null) {
+  //     window.location.replace("login.html");
+
+  //   }
+  //   else {
+  //     document.getElementById('username').innerHTML = data;
+  //     console.log("PAGE LOADED SUCCESSFULLY");
+  //   }
 
 
-       
-        // Copy the element and its child nodes
-        var cln = itm.cloneNode(true);
-        cln.childNodes[1].src = data[i]["image"];
-        console.log(cln.childNodes[0]);
+  // // });
 
-        cln.childNodes[3].childNodes.innerText = data[i]["card-title"];
-        console.log(cln.childNodes[3].childNodes[0].innerText = data[i]["card-title"])
 
-        cln.childNodes[3].childNodes[1].innerText = data[i]["card-text"];
-        // console.log(cln.childNodes[3].childNodes[5].childNodes[1].childNodes[1].childNodes[1].childNodes);
-        cln.childNodes[3].childNodes[5].childNodes[1].childNodes[1].childNodes[1].innerText = data[i]["like"];
-        // Append the cloneddiv element to div with 
-        itm.appendChild(cln);
-        // console.log(cln);
+  //  document.getElementById("username").addEventListener("load",user);
+  // window.addEventListener("login.json", function (data) {
+  //   let data = localStorage.getItem('email');
 
-        // for (let i = 0; i < localStorage.length; i++) {
-        //   let key = localStorage.key(i);
-        //   localStorage.setItem('like', data[i]['like']);
+  //   if (data == "undefined" || data == "" || data == null) {
+  //     window.location.replace("login.html");
+
+  //   }
+  //   else {
+  //     document.getElementById('username').innerHTML = data;
+  //     console.log("PAGE LOADED SUCCESSFULLY");
+  //   }
+
+
+  // })
+
+
+    var contents = [];
+
+
+
+
+    window.onload = (event) => {
+
+
+      $.getJSON('userpage.json', function (data) { // Get data from JSON file
+        console.log(data);
+
+        // console.log(data[0])
+        // console.log("CONTENTS" + contents);
+        // alert(localStorage.getItem(data['like']))
+
+        // for (let key in localStorage) {
+        //   localStorage.getItem('like')
         // }
-      }
-    });
+        var itm = document.getElementById("cards");
+        for (var i in data) {
+          // Copy the element and its child nodes
+          var cln = itm.cloneNode(true);
+          cln.childNodes[1].src = data[i]["image"];
+          console.log(cln.childNodes[0]);
 
-  };
+          cln.childNodes[3].childNodes.innerText = data[i]["card-title"];
+          console.log(cln.childNodes[3].childNodes[0].innerText = data[i]["card-title"])
+
+          cln.childNodes[3].childNodes[1].innerText = data[i]["card-text"];
+          // console.log(cln.childNodes[3].childNodes[5].childNodes[1].childNodes[1].childNodes[1].childNodes);
+          cln.childNodes[3].childNodes[5].childNodes[1].childNodes[1].childNodes[1].innerText = data[i]["like"];
+          // Append the cloneddiv element to div with 
+          itm.appendChild(cln);
+          // console.log(cln);
+
+          // for (let i = 0; i < localStorage.length; i++) {
+          //   let key = localStorage.key(i);
+          //   localStorage.setItem('like', data[i]['like']);
+          // }
+        }
+      });
+
+    };
 </script>
-
-</html>
