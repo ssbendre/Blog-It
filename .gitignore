@@ -3,4 +3,4 @@ app/css
 .scannerwork/*
 .sonar/*
 .sonarlint/
-.vscode
+.vscode/
