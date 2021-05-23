@@ -1,6 +1,6 @@
 node_modules/
 app/css
-.scannerwork/
-.sonar/
+.scannerwork/*
+.sonar/*
 .sonarlint/
 .vscode
