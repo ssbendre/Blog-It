@@ -2,4 +2,29 @@ img{
     height:160px;
     width:160px;
 }
+#side1{
+  //  background-color:lightgrey;
+    height: auto;
+   background-image: linear-gradient(grey,lightgrey);
+   border: 1px solid black;
+}
+#side1 ul{
+    list-style: none;
+   padding:1px;
+   margin:1px;
+
+}
+#side1 ul li a{
+     color: white;
+     text-decoration: none;
+     padding:10px;
+     display: block;
+     border-bottom: 1px solid black;
+}
+#side2{
+    height: auto;
+}
+#wrapper{
+    background-color:gainsboro;
+}
 
