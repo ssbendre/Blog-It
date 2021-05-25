@@ -20,7 +20,9 @@
     <script src="..//js/jquery.richtext.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <script src="..//js/blogeditor.js" defer></script>
-    
+
+    <script src="..//js/script2.js" defer></script>
+
   </head>
 
   <body>
@@ -31,24 +33,84 @@
           <button class="nav-link" id="nav-Manage-Post-tab" data-bs-toggle="tab" data-bs-target="#nav-Manage-Post" type="button" role="tab" aria-controls="nav-Manage-Post" aria-selected="false">Manage Post</button>
         </div>
       </nav>
+
+      <span id="message" style="color:green;">
+      <section class="text-center">
+       
+        <p id="para"> <button onclick="redirect()"></button></p>
+         </section></span>
+
+
+
       <div class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="nav-Add-Post" role="tabpanel" aria-labelledby="nav-Add-Post-tab">
-          <form>
+       
             <div class="mb-3">
             <label for="formGroupExampleInput" class="form-label">Blog Title</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="">
+            <input type="text" class="form-control" id="title" placeholder="">
             </div>
             <div class="mb-3">
-            <label for="formGroupExampleInput2" class="form-label">Category</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="">
+            <label for="formGroupExampleInput2" class="form-label">Author</label>
+            <input type="text" class="form-control" id="author" placeholder="">
             </div>
+            <div class="mb-3">
+              <label for="formGroupExampleInput3" class="form-label">Category</label>
+              <input type="text" class="form-control" id="category" placeholder="">
+              </div>
             <div class="page-wrapper box-content">
                 <textarea class="content" name="example"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">POST</button>
-        </form>
+            <button type="button" id="entry" class="btn btn-success" >Add Post</button>
+       
         </div>
-        <div class="tab-pane fade" id="nav-Manage-Post" role="tabpanel" aria-labelledby="nav-Manage-Post-tab">manage post</div>
+        <div class="tab-pane fade" id="nav-Manage-Post" role="tabpanel" aria-labelledby="nav-Manage-Post-tab">
+
+          <div class="admin-content">
+
+          
+
+            <div clas="contents">
+              <h2 class="page-title">Manage Posts</h2>
+
+              <table class="table table-success table-striped" id="display">
+              
+                  <thead>
+                      <!-- <th>SN</th> -->
+                      <th>Title</th>
+                      <th>Author</th>
+                      <th>Category</th>
+                      <!-- <th colspan="3">Action</th> -->
+                  </thead>
+                  <!-- <tbody>
+                      <tr>
+                          <td>1</td>
+                          <td>This is the first Post</td>
+                          <td>Harry</td>
+                          <td>Category1</td>
+                          <td><a href="#" class="edit">edit</a></td>
+                          <td><a href="#" class="delete">delete</a></td>
+                          <td><a href="#" class ="publish">publish</a></td>
+                      </tr>
+                      <tr>
+                          <td>2</td>
+                          <td>This is the Second Post</td>
+                          <td>Joshua</td>
+                          <td>Category2</td>
+                          <td><a href="#" class="edit">edit</a></td>
+                          <td><a href="#" class="delete">delete</a></td>
+                          <td><a href="#" class ="publish">publish</a></td>
+                      </tr>
+                  </tbody> -->
+              </table>
+          </div>
+
+      </div>
+      
+  </div>
+
+
+        </div>
+
       </div>
     </div>
   </body>
