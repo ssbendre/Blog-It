@@ -8,14 +8,19 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
+
 <link rel="stylesheet" href="../css/homepage.css">
+<script src="/Blog-It/app/Js/homepage.js"> </script>
+
 </head>
 
 <body>
     <section class="header">
         <nav>
             <a href="homepage.html"><img src="#logo">LOGO</a>
-            <div class="nav-links">
+            <div class="nav-links" id="nav-link">
+                <i class="fa fa-times" onclick="hidemenu()"></i>
                 <ul>
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">ABOUT</a></li>
@@ -23,6 +28,7 @@
                     <li><a href="#">SEARCH</a></li>
                 </ul>
             </div> 
+            <i class="fa fa-bars" onclick="showmenu()"></i>
         </nav>   
 <div class="text-box">
 
@@ -31,6 +37,13 @@
         pricing and select the one that fits your needs.</p>
     <a href="#" class="visit-lnk">Visit Us To Know More</a>
 </div>
+</section>
+   
+<section class="card">
+    <h3>Card view</h3>
+    <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet.</p>
+</section>
+
 
 
 </body>    
