@@ -1,31 +1,30 @@
+
+
 function login(){
     let un = document.querySelector("#name").value;
-    if(un=="")
+    let ps = document.querySelector("#pass").value;
+    console.log(un.length);
+    console.log(ps.length);
+    let msg1 = un.length;
+    let msg2 = ps.length;
+
+    if(msg1 == 0 || msg2 == 0)
     {
         document.querySelector("#sname").innerHTML = "**Username field is empty!";
-        return false;
-    }
-    if((un.lenght <= 2)||(un.lenght > 20))
-    {
-        document.querySelector("#sname").innerHTML = "**Username should be between 2-20!";
-        return false;
-    }
-   
-    let ps = document.querySelector("#pass").value;
-    if(ps=="")
-    {
         document.querySelector("#spass").innerHTML = "**Password field is empty!";
         return false;
     }
-    if((un.lenght <= 6)||(un.lenght > 15))
+    else if(msg1 >= 20 || msg2 >= 20)
     {
-        document.querySelector("#spass").innerHTML = "**Username should be between 6-15!";
-        return false;
+        document.querySelector("#sname").innerHTML = "**Username should be less then 20 charchters!";
+         document.querySelector("#spass").innerHTML = "**Password should be less then 20 characters!";
+        
     }
-   
- 
     
+
     document.querySelector("#name").value = "";
     document.querySelector("#pass").value = "";
   
 }
+
+
