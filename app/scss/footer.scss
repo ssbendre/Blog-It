@@ -1,0 +1,96 @@
+$br:50%;
+$clr: #fff;
+$ta:center;
+
+.container{
+    color: white;
+}
+
+
+.section-header h3 {
+    font-size: 36px;
+    color: #283d50;
+    text-align: $ta;
+    font-weight: 500;
+    position: relative
+}
+
+.section-header p {
+    text-align: $ta;
+    margin: auto;
+    font-size: 15px;
+    padding-bottom: 60px;
+    color: #556877;
+    width: 50%
+}
+footer{
+    
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7)),url(../images/hm3.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.fadeInUp {
+    animation-name: fadeInUp
+}
+
+#team .member {
+    text-align: $ta;
+    margin-bottom: 20px;
+    position: relative;
+    border-radius: $br;
+    overflow: hidden
+}
+
+#team .member .member-info {
+    opacity: 0;
+    display: flex;
+    align-items: $ta;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.2s
+}
+
+#team .member .member-info-content {
+    margin-top: 50px;
+    transition: margin 0.2s
+}
+
+#team .member:hover .member-info {
+    background: rgba(0, 62, 128, 0.7);
+    opacity: 1;
+    transition: 0.4s;
+    height: 200px;
+    width: 200px;
+    border-radius: $br;
+}
+
+.member img {
+    height: 200px;
+    width: 200px;
+    border-radius: $br;
+}
+
+#team .member h4 {
+    font-weight: 700;
+    margin-bottom: 2px;
+    font-size: 18px;
+    color:$clr;
+}
+
+#team .member span {
+    font-style: italic;
+    display: block;
+    font-size: 13px;
+    color:$clr;
+}
+
+#team .member .social a {
+    transition: none;
+    color:$clr;
+}
