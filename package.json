@@ -9,7 +9,7 @@
     "sonar:setup": "docker pull sonarqube:7.9.3-community",
     "sonar:run": "docker run --name sonar -p 9000:9000 sonarqube:7.9.3-community",
     "sonar": "node ./config/sonarqube",
-    "json:server":"json-server --watch db.json"
+    "json:server": "json-server --watch db.json"
   },
   "author": "",
   "license": "UNLICENSED",

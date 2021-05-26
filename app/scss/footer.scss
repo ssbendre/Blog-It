@@ -1,11 +1,7 @@
 $br:50%;
 $clr: #fff;
 $ta:center;
-footer
-{
-    background-color:lightseagreen;
-    
-}
+
 .container{
     color: white;
 }
@@ -26,6 +22,14 @@ footer
     padding-bottom: 60px;
     color: #556877;
     width: 50%
+}
+footer{
+    
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7)),url(../images/hm3.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
 }
 
 .fadeInUp {

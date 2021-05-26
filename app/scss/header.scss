@@ -1,7 +1,25 @@
 #navbarNav {
          justify-content: flex-end
 }
-.navbar
-{
-    background-color:lightseagreen
+// .navbar
+// {
+//     background-color:lightseagreen
+// }
+.navbar{
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7)),url(../images/hm3.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.collapse ul li :hover{
+        
+    background:black;
+    transition: 0.5s;
+}
+.fa{
+    padding-right: 20px;
+}
+.dropdown{
+    padding-right: 25px;
 }
