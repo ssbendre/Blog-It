@@ -1,0 +1,170 @@
+{
+  "categories": [
+    {
+      "category_name": "Food",
+      "id": "1"
+    },
+    {
+      "category_name": "Travel",
+      "id": "2"
+    },
+    {
+      "category_name": "Lifestyle",
+      "id": "3"
+    },
+    {
+      "category_name": "Music",
+      "id": "4"
+    }
+  ],
+  "register_db": [
+    {
+      "id": "1",
+      "username": "Aditi Gudadhe",
+      "email": "ms.aditigudadhe@gmail.com",
+      "mobileno": "8379019100",
+      "password": "Aditi@123"
+    },
+    {
+      "username": "hardikmehta",
+      "email": "hardik@gmail.com",
+      "mobileno": "8379019100",
+      "password": "Hardik@123",
+      "id": "dyRAdau"
+    },
+    {
+      "username": "Prajakta Bhidwe",
+      "email": "prajakta@gmail.com",
+      "mobileno": "8379019100",
+      "password": "Prajakta@123",
+      "confirm-password": "Prajakta@123",
+      "id": "3XxtyS6"
+    },
+    {
+      "username": "Joshua Nandrekar",
+      "email": "joshua@gmail.com",
+      "mobileno": "8379019100",
+      "password": "Joshua@123",
+      "confirm-password": "Joshua@123",
+      "id": "YLlZWPB"
+    },
+    {
+      "username": "Priya Sapkal",
+      "email": "priya123@gmail.com",
+      "mobileno": "3434343343",
+      "password": "Priya@123",
+      "confirm-password": "Priya@123",
+      "id": "yIxnJy1"
+    },
+    {
+      "username": "Pratik Thakare",
+      "email": "pratik@gmail.com",
+      "mobileno": "3434343343",
+      "password": "Pratik@123",
+      "confirm-password": "Pratik@123",
+      "id": "CjTZwmy"
+    },
+    {
+      "username": "Adi",
+      "email": "adi123@gmail.com",
+      "mobileno": "8379019100",
+      "password": "Adi@12345",
+      "confirm-password": "Adi@12345",
+      "id": "Qed8WM9"
+    },
+    {
+      "username": "Abhishek Mande",
+      "email": "abhishekmande@gmail.com",
+      "mobileno": "9876543210",
+      "password": "Abhishek@123",
+      "confirm-password": "Abhishek@123",
+      "id": "pzn2ETR"
+    },
+    {
+      "username": "Adinath Raut",
+      "email": "adinathraut@gmail.com",
+      "mobileno": "8379019100",
+      "password": "Adinath@123",
+      "confirm-password": "Adinath@123",
+      "id": "iW_4Cso"
+    }
+  ],
+  "post_db": [
+    {
+      "id": 1,
+      "image": "https://th.bing.com/th/id/OIP.DiIVLRjR3sJ8qHsBBTUiQwHaFj?pid=ImgDet&rs=1",
+      "blogTitle": "Steve Broadhead Broadband Testing",
+      "blogData": "Some things in IT never change and one is exposing vulnerabilities in Microsoft’s armoury, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.not least as has recently been reported, Microsoft Exchange. Oh, how the hackers love Exchange… ",
+      "like": 92,
+      "comments": [
+        {
+          "username": "prajakta@gmail.com",
+          "comment": "Delicious food recipe that will make us soo hungry!!",
+          "time": "Thu May 27 2021  5:46:49"
+        },
+        {
+          "username": "hardik@gmail.com",
+          "comment": " This is a delicious twist ,and is VERY easy to make.",
+          "time": "Thu May 27 2021  6:17:58"
+        },
+        {
+          "username": "priya123@gmail.com",
+          "comment": "I used garlic naan bread, mild Italian sausage, and my homemade marinara sauce.  I must say that the ricotta in the cheese base really does make this taste a bit like lasagna. The mozzarella on top did take a while to brown up, so I'll bump up the temperature to 400° next time.   Quick and easy lunch today....and tasty, too!\",",
+          "time": "Thu May 27 2021  6:21:53"
+        }
+      ],
+      "timestamp": "Wed May 26 2021  20:48:3"
+    },
+    {
+      "image": "https://th.bing.com/th/id/Rb06d4b80e989e16d84ef5ca82ff07077?rik=DUGSAWFcCrkshw&riu=http%3a%2f%2fpic1.bbzhi.com%2fsheyingbizhi%2fribenmeishisheyingshousichadian%2fphotograph_japanese_food_spring_45469_1.jpg&ehk=Rrah4Nqz6JkjNECK43qAH12yY%2fC0hAnm8adMwRacx20%3d&risl=&pid=ImgRaw",
+      "blogTitle": "Steve Broadhead Broadband Testing",
+      "blogData": "Some things in IT never change and one is exposing vulnerabilities in Microsoft’s armoury,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. not least as has recently been reported, Microsoft Exchange. Oh, how the hackers love Exchange…Some things in IT never change and one is exposing vulnerabilities in Microsoft’s armoury, not least as has recently been reported, Microsoft Exchange. Oh, how the hackers love Exchange…Some things in IT never change and one is exposing vulnerabilities in Microsoft’s armoury, not least as has recently been reported, Microsoft Exchange. Oh, how the hackers love Exchange…Some things in IT never change and one is exposing vulnerabilities in Microsoft’s armoury, not least as has recently been reported, Microsoft Exchange. Oh, how the hackers love Exchange… ",
+      "like": 5,
+      "category": "Some things in IT never change and one is exposing vulnerabilities in Microsoft’s armoury,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. not least as has recently been reported, Microsoft Exchange. Oh, how the hackers love Exchange…Some things in IT never change and one is exposing vulnerabilities in Microsoft’s armoury, not least as has recently been reported, Microsoft Exchange. Oh, how the hackers love Exchange…Some things in IT never change and one is exposing vulnerabilities in Microsoft’s armoury, not least as has recently been reported, Microsoft Exchange. Oh, how the hackers love Exchange…Some things in IT never change and one is exposing vulnerabilities in Microsoft’s armoury, not least as has recently been reported, Microsoft Exchange. Oh, how the hackers love Exchange… ",
+      "timestamp": "Wed May 26 2021  21:10:29",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "image": "https://th.bing.com/th/id/OIP._d92e_pHDJV4lOdm0QYM7gHaFj?w=263&h=197&c=7&o=5&dpr=1.25&pid=1.7",
+      "blogTitle": "FETCHING 3",
+      "blogData": "Some things in IT never change and one is exposing vulnerabilities in Microsoft’s armoury,Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. not least as has recently been reported, Microsoft Exchange. Oh, how the hackers love Exchange… ",
+      "comments": [
+        {
+          "username": " username",
+          "comment": "comment",
+          "id": 1
+        }
+      ],
+      "like": 76,
+      "timestamp": "Wed May 26 2021  21:10:29"
+    },
+    {
+      "id": 4,
+      "image": "https://th.bing.com/th/id/OIP.BdbWusM7YxRb86mpkd2IWQHaFj?w=242&h=182&c=7&o=5&dpr=1.25&pid=1.7",
+      "blogTitle": "Steve Broadhead Broadband Testing",
+      "blogData": "Some things in IT never change and one is exposing vulnerabilities in Microsoft’s armoury, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.not least as has recently been reported, Microsoft Exchange. Oh, how the hackers love Exchange… ",
+      "like": 76,
+      "comments": [],
+      "timestamp": "Wed May 26 2021  21:10:29"
+    },
+    {
+      "image": "",
+      "blogTitle": "asasaSA",
+      "blogData": "<div>SASas</div>",
+      "like": 2,
+      "category": "ASAsA",
+      "timestamp": "Thu May 27 2021  4:39:44",
+      "id": 5
+    },
+    {
+      "image": "https://th.bing.com/th/id/OIP._d92e_pHDJV4lOdm0QYM7gHaFj?w=263&h=197&c=7&o=5&dpr=1.25&pid=1.7",
+      "blogTitle": "Delicious Desserts",
+      "blogData": "<div><br></div>",
+      "like": "0",
+      "category": "Some things in IT never change and one is exposing vulnerabilities in Microsoft’s armoury, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.not least as has recently been reported, Microsoft Exchange. Oh, how the hackers love Exchange… ",
+      "timestamp": "Thu May 27 2021  4:41:26",
+      "id": 6
+    }
+  ]
+}

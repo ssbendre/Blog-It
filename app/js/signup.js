@@ -1,9 +1,43 @@
+$(document).ready(function(){
+$( "#testform" ).submit(function( event ) {
+    event.preventDefault();
+  // Send the data using post
+  $.post( "http://localhost:3000/register_db", $( "#testform" ).serialize() )
+  .done(function() {
+    window.location = "login.html";
+});
 
+});
+
+});
+
+const usernameEl = document.querySelector('#username');
 const emailEl = document.querySelector('#email');
 const passwordEl = document.querySelector('#password');
-const form = document.querySelector('#signup');
+const confirmPasswordEl = document.querySelector('#confirm-password');
+
+const form = document.querySelector('#testform');
 
 
+const checkUsername = () => {
+
+    let valid = false;
+
+    const min = 3,
+        max = 25;
+
+    const username = usernameEl.value.trim();
+
+    if (!isRequired(username)) {
+        showError(usernameEl, 'Username cannot be blank.');
+    } else if (!isBetween(username.length, min, max)) {
+        showError(usernameEl, `Username must be between ${min} and ${max} characters.`)
+    } else {
+        showSuccess(usernameEl);
+        valid = true;
+    }
+    return valid;
+};
 
 
 
@@ -30,7 +64,7 @@ const checkPassword = () => {
     if (!isRequired(password)) {
         showError(passwordEl, 'Password cannot be blank.');
     } else if (!isPasswordSecure(password)) {
-        showError(passwordEl, 'Incorrect Password!');
+        showError(passwordEl, 'Password must has at least 8 characters that include at least 1 lowercase character, 1 uppercase characters, 1 number, and 1 special character in (!@#$%^&*)');
     } else {
         showSuccess(passwordEl);
         valid = true;
@@ -39,7 +73,23 @@ const checkPassword = () => {
     return valid;
 };
 
+const checkConfirmPassword = () => {
+    let valid = false;
+    // check confirm password
+    const confirmPassword = confirmPasswordEl.value.trim();
+    const password = passwordEl.value.trim();
 
+    if (!isRequired(confirmPassword)) {
+        showError(confirmPasswordEl, 'Please enter the password again');
+    } else if (password !== confirmPassword) {
+        showError(confirmPasswordEl, 'The password does not match');
+    } else {
+        showSuccess(confirmPasswordEl);
+        valid = true;
+    }
+
+    return valid;
+};
 
 const isEmailValid = (email) => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -89,14 +139,15 @@ form.addEventListener('submit', function (e) {
 
 
     // validate forms
-    let  isEmailValid = checkEmail(),
-        isPasswordValid = checkPassword();
-        //isConfirmPasswordValid = checkConfirmPassword();
+    let isUsernameValid = checkUsername(),
+        isEmailValid = checkEmail(),
+        isPasswordValid = checkPassword(),
+        isConfirmPasswordValid = checkConfirmPassword();
 
-    let isFormValid = 
+    let isFormValid = isUsernameValid &&
         isEmailValid &&
-        isPasswordValid ;
-  
+        isPasswordValid &&
+        isConfirmPasswordValid;
 
     // submit to the server if the form is valid
     if (isFormValid) {
@@ -121,12 +172,17 @@ const debounce = (fn, delay = 500) => {
 // 
 form.addEventListener('input', debounce(function (e) {
     switch (e.target.id) {
+        case 'username':
+            checkUsername();
+            break;
         case 'email':
             checkEmail();
             break;
         case 'password':
             checkPassword();
             break;
-
+        case 'confirm-password':
+            checkConfirmPassword();
+            break;
     }
 }));

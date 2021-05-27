@@ -1,108 +1,117 @@
-
-var contents = [];
-
-
-
-var json = [];
 window.onload = (event) => {
-
-    var data = JSON.parse(localStorage.getItem('userpage'));
-
-    //  $.getJSON('userpage.json', function (data) {
-    //      for (var i in data) {
-
-    //         let map = { "image": data[i]["image"], "like": data[i]['like'], 'card-text': data[i]["card-text"], 'card-title': data[i]["card-title"] };
-    //     json.push(map);
-    //  }
-    //      localStorage.setItem('userpage', JSON.stringify(json));
-
-
-    // }); // Get data from JSON file
-    console.log(data);
-
-
-    let username = localStorage.getItem('email');
+    let username = sessionStorage.getItem('email');
 
     if (username == "undefined" || username == "" || username == null) {
         window.location.replace("login.html");
 
-    }
-    else {
+    } else {
         document.getElementById('username').innerHTML = username;
         console.log("PAGE LOADED SUCCESSFULLY");
     }
-   
-    var parent = document.getElementById('parent');
-    var itm = document.getElementById("cards");
-    for (var i in data) {
+
+    $.ajax({
+        type: "Get",
+        url: "http://localhost:3000/post_db",
+        dataType: "json",
+        success: function(data) {
 
 
-        console.log(i);
-      
-        let cln = itm.cloneNode(true);
-        cln.childNodes[1].src = data[i]["image"];
-      
+            var div = "";
+            for (var i in data) {
+                var likeId = "l" + data[i].id;
+                div += `<br><div class="row " id="${data[i].id}">
+        <div class="col-6">
+          <div class="card" >
+            <img class="image" alt="..." src="${data[i].image}" />
+            <div class="card-body">
+              <h5>${data[i].blogTitle}</h5>
+            
+              <p class="blog-data" style="color: gray;font-size: 14px;font-weight: 100;">
+              ${data[i].blogData.slice(0,200)}... <button onclick="Readmore(${data[i].id})"  
+              style="outline: none;border: none;text-decoration: none;text-transform: none;background-color: white;">
+             <b>Read more..</b>
+            </button>  </p>
+           
+              <span>
+                <div class="row">
+                  <div class="col-3 p-0">
 
-        cln.childNodes[3].childNodes[3].innerText = data[i]["card-text"];
-        //   console.log(cln.childNodes[3].childNodes[0].innerText = data[i]["card-title"])
+                    <button onclick="LikeMe(${data[i].id})" class="fa fa-thumbs-o-up fa-2x" 
+                      style="outline: none;border: none;text-decoration: none;text-transform: none;background-color: white;">
+                      <span  id="${likeId}">${data[i].like} </span>
+                    </button>
+              
+                  
+                  </div>
+                  <div class="row ">
+                  <div class="col p-0 d-flex justify-content-end align-items-end">
+                  <label><b>Date : </b></label><span>  ${data[i].timestamp}</span>
+                  </div>
+                  </div>  
+                
+            </div>
+        </span>
+           
+        <br><br>
 
-        cln.childNodes[3].childNodes[1].innerText = data[i]["card-title"];
+            </div>
+ </div>
+           </div>
 
-        cln.childNodes[3].childNodes[5].childNodes[1].childNodes[1].childNodes[1].innerText = data[i]["like"];
-        cln.childNodes[3].childNodes[5].childNodes[1].childNodes[7].innerText= i;
-        console.log(cln.childNodes[3].childNodes[5].childNodes[1].childNodes[7]);
+      </div>`
 
-        // Append the cloneddiv element to div with 
-        parent.append(cln);
-        
-    }
-    itm.style.display = 'none';
-   
 
+            }
+            document.getElementById('container1').innerHTML = div;
+
+        }
+    });
 
 
 };
 
 
+function Add() {
+    window.location = "addpost.html";
+}
 
 
+let LikeMe = function(id) {
+    var btnElement = "l" + id;
+    console.log(btnElement)
+    var LikeCount = parseInt(document.getElementById(btnElement).innerText);
+    ++LikeCount;
+    document.getElementById(btnElement).innerText = LikeCount;
 
-let LikeMe = function (btnElement) {
-    /**   console.log(btnElement.childNodes[0]);*/
-  
-    let LikeCounter = btnElement.childNodes[0].nodeValue;
-    let LikeCount = parseInt(LikeCounter);
-    LikeCount++;
-    btnElement.childNodes[0].nodeValue = LikeCount;
+    var likes = JSON.stringify({ "like": LikeCount });
 
-    var data = JSON.parse(localStorage.getItem('userpage'));
-    let index =  btnElement.parentElement.nextElementSibling.nextElementSibling.nextElementSibling.innerText;
-    console.log(index);
-    data[index]['like']=LikeCount;
-    localStorage.setItem('userpage', JSON.stringify(data));
+
+    $.ajax({
+        type: "PATCH",
+        url: "http://localhost:3000/post_db/" + id,
+        async: true,
+        processData: false,
+        data: likes,
+        contentType: 'application/json',
+        success: function(data) {
+            console.log(data);
+        },
+        error: function() {
+            alert(":x: Comment Failed");
+        },
+    });
 
 
 }
 
-var logout= function(){
-    localStorage.removeItem('email');
-   window.location.replace('login.html');
-    
+
+function Readmore(id) {
+    sessionStorage.setItem('blogId', id);
+    window.location = "readmore.html";
 }
 
+var logout = function() {
+    sessionStorage.removeItem('email');
+    window.location.replace('login.html');
 
-let commentHere = function (btnElementComment) {
-    const commentBox =
-      btnElementComment.parentElement.parentElement.parentElement
-.childNodes[2];
-console.log(commentBox);
-    let newElement = commentBox.childNodes[0].cloneNode(true);
-    // lets access teh input box
-    const inputElem =
-      btnElementComment.parentElement.parentElement.childNodes[1].childNodes[0];
-    newElement.childNodes[0].innerHTML = inputElem.value;
-    // clear the input
-    inputElem.value = "";
-    // add the new element to comment box
-    commentBox.insertBefore(newElement, commentBox.firstChild);
-  };
+}

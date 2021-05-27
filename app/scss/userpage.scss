@@ -1,6 +1,6 @@
 .image{
-    height:400px;
-    width:545px;
+    height:auto;
+    width:auto;
    
 }
 card-group{
@@ -21,3 +21,39 @@ color: gray;
     text-decoration: none;
     text-transform: none;
     background-color: white;}
+
+    img{
+        height:auto;
+        width:auto;
+    }
+    #side1{
+      //  background-color:lightgrey;
+        height: auto;
+       background-image: linear-gradient(grey,lightgrey);
+       border: 1px solid black;
+    }
+    #side1 ul{
+        list-style: none;
+       padding:1px;
+       margin:1px;
+    
+    }
+    #side1 ul li a{
+         color: white;
+         text-decoration: none;
+         padding:10px;
+         display: block;
+         border-bottom: 1px solid black;
+    }
+    #side2{
+        height: auto;
+    }
+    #wrapper{
+        background-color:gainsboro;
+    }
+    
+  
+    #btn{
+       
+        position: absolute;
+    }
