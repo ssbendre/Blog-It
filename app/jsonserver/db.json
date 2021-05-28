@@ -87,6 +87,14 @@
       "password": "Adinath@123",
       "confirm-password": "Adinath@123",
       "id": "iW_4Cso"
+    },
+    {
+      "username": "Azharuddin Jalgoankar",
+      "email": "azhar@gmail.com",
+      "mobileno": "8379019100",
+      "password": "Azhar@123",
+      "confirm-password": "Azhar@123",
+      "id": "cvvFbAt"
     }
   ],
   "post_db": [
@@ -111,6 +119,11 @@
           "username": "priya123@gmail.com",
           "comment": "I used garlic naan bread, mild Italian sausage, and my homemade marinara sauce.  I must say that the ricotta in the cheese base really does make this taste a bit like lasagna. The mozzarella on top did take a while to brown up, so I'll bump up the temperature to 400° next time.   Quick and easy lunch today....and tasty, too!\",",
           "time": "Thu May 27 2021  6:21:53"
+        },
+        {
+          "username": "azhar@gmail.com",
+          "comment": "Very Nice",
+          "time": "Thu May 27 2021  10:54:30"
         }
       ],
       "timestamp": "Wed May 26 2021  20:48:3"
@@ -165,6 +178,15 @@
       "category": "Some things in IT never change and one is exposing vulnerabilities in Microsoft’s armoury, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.not least as has recently been reported, Microsoft Exchange. Oh, how the hackers love Exchange… ",
       "timestamp": "Thu May 27 2021  4:41:26",
       "id": 6
+    },
+    {
+      "image": "",
+      "blogTitle": "",
+      "blogData": "<div><br></div>",
+      "like": "0",
+      "category": "",
+      "timestamp": "Thu May 27 2021  10:54:54",
+      "id": 7
     }
   ]
 }
